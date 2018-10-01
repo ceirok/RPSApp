@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RPSApp</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+</resources>
