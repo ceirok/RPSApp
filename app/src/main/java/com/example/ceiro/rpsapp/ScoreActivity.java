@@ -40,7 +40,8 @@ public class ScoreActivity extends AppCompatActivity {
         SharedPreferences playerData = getSharedPreferences("playerInfo", Context.MODE_PRIVATE);
         editor = playerData.edit();
         editor.putString("playerInfo", playerName + "                                                     " + playerScore + "");
-
+        editor.apply();
+        editor.commit();
         Map<String, ?> allEntries = playerData.getAll();
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listItems);
         list.setAdapter(adapter);
@@ -50,8 +51,7 @@ public class ScoreActivity extends AppCompatActivity {
         }
 
         adapter.notifyDataSetChanged();
-        editor.apply();
-        editor.commit();
+
 
         playAgain.setOnClickListener(new View.OnClickListener() {
             @Override

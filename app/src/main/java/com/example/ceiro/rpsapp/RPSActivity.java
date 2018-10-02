@@ -80,24 +80,13 @@ public class RPSActivity extends AppCompatActivity {
         if(counter == 0){
             String currentPlayer = newName;
             Intent endIntent = new Intent(getApplicationContext(), ScoreActivity.class);
-            Integer winCounter = 0;
-            if(playerScore > cpuScore){
-                winCounter++;
-            } else {
-                winCounter = 0;
-            }
+
             endIntent.putExtra("player.name", currentPlayer);
-            endIntent.putExtra("player.score", winCounter);
+            endIntent.putExtra("player.score", playerScore);
             startActivity(endIntent);
         }
     }
-    public void checkWinCount(){
-        if(result.equals("You win!")){
-            playerScore++;
-        } else {
-            cpuScore++;
-        }
-    }
+
     public void calculate(){
         int cpu = r.nextInt(3);
 
