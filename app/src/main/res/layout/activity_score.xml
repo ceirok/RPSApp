@@ -12,20 +12,39 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Current score"
+        android:gravity="center_horizontal"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_marginBottom="20dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:id="@+id/currentText"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
         android:layout_marginBottom="20dp"
         android:gravity="center_horizontal"
         android:text="TOP SCORES"
+        android:textColor="#000"
         android:textSize="30dp"
-        android:textStyle="bold"
-        android:textColor="#000"/>
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="86dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="-1dp"
         android:weightSum="2">
 
         <TextView
@@ -33,40 +52,69 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Player name"
-            android:textSize="20dp"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:textSize="20dp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="-158dp"
             android:layout_weight="1"
             android:text="Score"
             android:textAlignment="center"
-            android:textSize="20dp"
-            android:textColor="#000"/>
+            android:textColor="#000"
+            android:textSize="20dp" />
 
     </LinearLayout>
 
     <ListView
-        android:layout_width="363dp"
-        android:layout_height="291dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="57dp"
-        android:id="@+id/list">
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="50dp">
 
     </ListView>
 
-    <Button
-        android:id="@+id/playAgain"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="#0372dd"
-        android:textColor="#fff"
-        android:text="Play again" />
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="363dp"
+            android:layout_height="30dp"
+            android:background="#0372dd"
+            android:layout_marginEnd="1dp"
+            android:onClick="onSave"
+            android:text="Save"
+            android:textColor="#fff"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/show"
+            android:layout_width="363dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="1dp"
+            android:background="#0372dd"
+            android:onClick="onShow"
+            android:text="Show"
+            android:textColor="#fff"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/playAgain"
+            android:layout_width="363dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="1dp"
+            android:background="#0372dd"
+            android:text="Play again"
+            android:textColor="#fff"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
 
 </RelativeLayout>
